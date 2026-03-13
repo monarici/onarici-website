@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapay Zeka – M.Onarıcı</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 30px 20px;
+            min-height: 100vh;
+        }
+
+        /* ── Üst Bant ─────────────────────────────────── */
+        .top-bar {
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        /* Sol: Küçülmüş Logo */
+        .logo-band {
+            flex: 0 0 180px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 18px 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            text-decoration: none;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .logo-band:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+
+        .logo-band-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 32px;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .logo-band-sub {
+            font-family: 'Poppins', sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.85);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        .logo-band-back {
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* Sağ: Yapay Zeka Banner Kartı */
+        .ai-banner {
+            flex: 1;
+            height: 160px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            display: flex;
+            align-items: center;
+            padding: 0 36px;
+            gap: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-banner-icon {
+            width: 80px;
+            height: 80px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ai-banner-icon img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .ai-banner-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 1px;
+            text-shadow:
+                -1px -1px 0 #b04060,
+                1px 1px 0 #b04060;
+        }
+
+        .ai-banner-sub {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            color: rgba(255,255,255,0.85);
+            margin-top: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── İçerik Kutusu ────────────────────────────── */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-box {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 24px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            padding: 48px 52px;
+            min-height: 420px;
+        }
+
+        .content-box h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f093fb44;
+        }
+
+        .content-box p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .content-box ul, .content-box ol {
+            padding-left: 24px;
+            color: #555;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        /* ── Responsive ───────────────────────────────── */
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+            }
+
+            .logo-band {
+                flex: none;
+                flex-direction: row;
+                gap: 12px;
+                padding: 14px 20px;
+                border-radius: 16px;
+            }
+
+            .logo-band-back {
+                margin-top: 0;
+            }
+
+            .ai-banner {
+                height: 120px;
+                border-radius: 16px;
+            }
+
+            .ai-banner-title {
+                font-size: 26px;
+            }
+
+            .content-box {
+                padding: 30px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Üst Bant -->
+    <div class="top-bar">
+
+        <!-- Sol: Logo -->
+        <a class="logo-band" href="index.html" title="Ana sayfaya dön">
+            <span class="logo-band-name">M.Onarıcı</span>
+            <span class="logo-band-sub">Çalışma Alanı</span>
+            <span class="logo-band-back">← Ana Sayfa</span>
+        </a>
+
+        <!-- Sağ: Yapay Zeka Banner -->
+        <div class="ai-banner">
+            <div class="ai-banner-icon">
+                <img src="images/icon2.png" alt="Yapay Zeka">
+            </div>
+            <div>
+                <div class="ai-banner-title">Yapay Zeka</div>
+                <div class="ai-banner-sub">Kavramlar · Araçlar · Uygulamalar</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- İçerik Kutusu -->
+    <div class="content-wrapper">
+        <div class="content-box">
+            <h2>Yapay Zeka Nedir?</h2>
+            <p>İçeriklerinizi buraya ekleyebilirsiniz...</p>
+        </div>
+    </div>
+
+</body>
+</html>

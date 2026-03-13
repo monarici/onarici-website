@@ -28,6 +28,25 @@
             color: #333;
             font-size: 42px;
             margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .header-logo-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 56px;
+            color: #333;
+            display: block;
+            line-height: 1;
+        }
+
+        .header-sub-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #555;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
         }
 
         .header p {
@@ -39,7 +58,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
@@ -126,6 +145,7 @@
             justify-content: center;
             align-items: center;
             z-index: 1;
+            pointer-events: none;
         }
 
         .card-icon img {
@@ -221,8 +241,7 @@
         }
 
         .card-7 {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            color: #333;
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
         }
 
         .card-8 {
@@ -246,13 +265,27 @@
             z-index: 2;
         }
 
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 32px;
             }
 
+            .header-logo-text {
+                font-size: 42px;
+            }
+
+            .header-sub-text {
+                font-size: 16px;
+            }
+
             .container {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
 
@@ -263,23 +296,19 @@
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>
+            <span class="header-logo-text">Murat Onarıcı</span>
+            <span class="header-sub-text">Çalışma Alanı</span>
+        </h1>
+    </div>
     <div class="container">
-        <!-- Logo Kartı -->
-        <div class="card card-1">
-            <div class="card-logo">
-                <div class="card-logo-text">
-                    <div class="card-logo-line1">M.O</div>
-                    <div class="card-logo-line2">ONARICI</div>
-                </div>
-            </div>
-        </div>
-
         <!-- Yapay Zeka -->
         <div class="card card-2">
             <div class="card-icon">
                 <img src="images/icon2.png" alt="Yapay Zeka">
             </div>
-            <a href="#yapay-zeka">
+            <a href="ai.html">
                 <div class="card-arrow">→</div>
                 <div class="card-content">Yapay Zeka</div>
             </a>
@@ -290,7 +319,7 @@
             <div class="card-icon">
                 <img src="images/icon3.png" alt="Eğitimde Teknolojik Ortamlar">
             </div>
-            <a href="#egitimde-teknoloji">
+            <a href="education.html">
                 <div class="card-arrow">→</div>
                 <div class="card-content">Eğitimde Teknolojik Ortamlar</div>
             </a>
@@ -301,7 +330,7 @@
             <div class="card-icon">
                 <img src="images/icon4.png" alt="Ağ Altyapı Sistemleri">
             </div>
-            <a href="#ag-altyapı">
+            <a href="network.html">
                 <div class="card-arrow">→</div>
                 <div class="card-content">Ağ Altyapı Sistemleri</div>
             </a>
@@ -312,20 +341,9 @@
             <div class="card-icon">
                 <img src="images/icon5.png" alt="İnternet Erişim Tipleri">
             </div>
-            <a href="#internet-erisim">
+            <a href="internet.html">
                 <div class="card-arrow">→</div>
                 <div class="card-content">İnternet Erişim Tipleri</div>
-            </a>
-        </div>
-
-        <!-- Küresel Haberler -->
-        <div class="card card-6">
-            <div class="card-icon">
-                <img src="images/icon6.png" alt="Küresel Haberler">
-            </div>
-            <a href="#kuresel-haberler">
-                <div class="card-arrow">→</div>
-                <div class="card-content">Küresel Haberler</div>
             </a>
         </div>
 
@@ -334,7 +352,7 @@
             <div class="card-icon">
                 <img src="images/icon7.png" alt="Öğrenme ve Gelişim Topluluğu">
             </div>
-            <a href="#ogrenme-toplulugu">
+            <a href="community.html">
                 <div class="card-arrow">→</div>
                 <div class="card-content">Öğrenme ve Gelişim Topluluğu</div>
             </a>
@@ -342,7 +360,7 @@
 
         <!-- Kişi Rehberi -->
         <div class="card card-8">
-            <a href="#kisi-rehberi">
+            <a href="person.html">
                 <div class="card-arrow">→</div>
                 <div class="card-person">
                     <img src="images/mono.jpeg" alt="Kişi Rehberi">
