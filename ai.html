@@ -144,16 +144,21 @@
             font-size: 22px;
             font-weight: 700;
             color: #333;
+            margin-top: 28px;
             margin-bottom: 18px;
             padding-bottom: 12px;
             border-bottom: 2px solid #f093fb44;
+        }
+
+        .content-box h2:first-child {
+            margin-top: 0;
         }
 
         .content-box p {
             font-size: 16px;
             color: #555;
             line-height: 1.8;
-            margin-bottom: 16px;
+            margin-bottom: 32px;
         }
 
         .content-box ul, .content-box ol {
@@ -161,6 +166,16 @@
             color: #555;
             font-size: 16px;
             line-height: 1.9;
+        }
+
+        .content-box a {
+            color: #b04060;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .content-box a:hover {
+            text-decoration: underline;
         }
 
         /* ── Responsive ───────────────────────────────── */
@@ -224,8 +239,45 @@
     <!-- İçerik Kutusu -->
     <div class="content-wrapper">
         <div class="content-box">
-            <h2>Yapay Zeka Nedir?</h2>
-            <p>İçeriklerinizi buraya ekleyebilirsiniz...</p>
+            <h2>Eğitimde Kullanılan Yapay Zeka Araçları</h2>
+            <p>Yapay zeka, eğitim süreçlerinde yalnızca “teknolojik bir yenilik” değil; öğretmenlerin planlama süresini azaltan, öğrencilerin bireysel ihtiyaçlarına göre öğrenme deneyimi sunan güçlü bir destek sistemidir. Doğru kullanıldığında hem sınıf içi etkileşimi artırır hem de öğrenme çıktılarının daha hızlı analiz edilmesini sağlar.</p>
+
+            <p>Bugün eğitimde kullanılan yapay zeka araçlarını beş ana grupta inceleyebiliriz:</p>
+            <ol>
+                <li><strong>İçerik üretim araçları:</strong> Ders anlatımı, çalışma kağıdı, örnek soru ve metin sadeleştirme için kullanılır.</li>
+                <li><strong>Değerlendirme araçları:</strong> Quiz hazırlama, rubrik oluşturma ve hızlı geri bildirim sağlar.</li>
+                <li><strong>Dil ve yazma destek araçları:</strong> Yazım, dil bilgisi, anlatım ve akademik üslup geliştirmede etkilidir.</li>
+                <li><strong>Görsel-sunum araçları:</strong> Slayt, poster, görsel materyal ve infografik üretimini hızlandırır.</li>
+                <li><strong>Öğrenme asistanları:</strong> Öğrencinin seviyesine uygun açıklama, tekrar ve kişiselleştirilmiş çalışma planı sunar.</li>
+            </ol>
+
+            <h2>Sık Kullanılan Araçlar ve Eğitimdeki Rolleri</h2>
+            <ul>
+                <li><strong><a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">ChatGPT</a> / <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">Gemini</a> / <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer">Microsoft Copilot</a>:</strong> Ders planı oluşturma, konu özeti çıkarma, farklı seviyelere uygun soru hazırlama ve örnek etkinlik üretmede etkilidir.</li>
+                <li><strong><a href="https://www.khanacademy.org/khan-labs" target="_blank" rel="noopener noreferrer">Khanmigo</a> benzeri öğrenme asistanları:</strong> Öğrenciyi adım adım yönlendirerek hazır cevap vermek yerine düşünme sürecini destekler.</li>
+                <li><strong><a href="https://quizizz.com" target="_blank" rel="noopener noreferrer">Quizizz AI</a> / <a href="https://kahoot.com" target="_blank" rel="noopener noreferrer">Kahoot</a> içerik önerileri:</strong> Konuya göre hızlı ölçme-değerlendirme soruları üretir, sınıf içi motivasyonu artırır.</li>
+                <li><strong><a href="https://www.canva.com/magic-write/" target="_blank" rel="noopener noreferrer">Canva Magic Write</a> / görsel üretim araçları:</strong> Ders afişi, sunum görselleri ve öğrenme materyallerini kısa sürede hazırlamayı sağlar.</li>
+                <li><strong><a href="https://www.grammarly.com" target="_blank" rel="noopener noreferrer">Grammarly</a> / <a href="https://languagetool.org" target="_blank" rel="noopener noreferrer">LanguageTool</a>:</strong> Öğrenci yazılarında yazım ve anlatım kalitesini yükseltir, öğretmenin geri bildirim süresini kısaltır.</li>
+                <li><strong><a href="https://www.notion.so/product/ai" target="_blank" rel="noopener noreferrer">Notion AI</a> / benzeri not araçları:</strong> Ders notlarını özetleme, anahtar kavram çıkarma ve haftalık çalışma planı oluşturmada kullanılır.</li>
+            </ul>
+
+            <h2>Öğretmen İçin Pratik Kullanım Senaryoları</h2>
+            <ol>
+                <li><strong>Ders öncesi:</strong> 40 dakikalık ders akışı, kazanım bazlı etkinlik ve farklılaştırılmış görevler hazırlanır.</li>
+                <li><strong>Ders sırasında:</strong> Anlık örnek soru üretimi, kavram açıklaması ve öğrenci seviyesine göre alternatif anlatım yapılır.</li>
+                <li><strong>Ders sonrası:</strong> Kısa değerlendirme sınavı, geri bildirim metni ve eksik kazanım analizi oluşturulur.</li>
+            </ol>
+
+            <h2>Dikkat Edilmesi Gereken Noktalar</h2>
+            <ul>
+                <li><strong>Veri gizliliği:</strong> Öğrenciye ait kişisel veriler araçlara doğrudan yüklenmemelidir.</li>
+                <li><strong>Doğrulama:</strong> Yapay zekanın ürettiği içerikler mutlaka öğretmen kontrolünden geçmelidir.</li>
+                <li><strong>Pedagojik uygunluk:</strong> Her içerik yaş düzeyi, kazanım ve ders hedefleriyle uyumlu olmalıdır.</li>
+                <li><strong>Etik kullanım:</strong> Yapay zeka, öğrencinin yerine üretim yapan bir araç değil; öğrenmeyi destekleyen yardımcı bir sistem olarak konumlandırılmalıdır.</li>
+            </ul>
+
+            <h2>Sonuç</h2>
+            <p>Eğitimde yapay zeka araçları; öğretmenin yerini almak için değil, öğretmenin etkisini güçlendirmek için vardır. Planlama, içerik üretimi, ölçme-değerlendirme ve bireyselleştirilmiş öğrenme alanlarında sağladığı hız ve esneklik sayesinde eğitim kalitesini artırır. En verimli sonuç için temel yaklaşım; “insan rehberliği + yapay zeka desteği” dengesini korumaktır.</p>
         </div>
     </div>
 
