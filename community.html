@@ -149,6 +149,180 @@
             line-height: 1.9;
         }
 
+        .hero-figure {
+            margin-top: 22px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 1px solid #dfe8eb;
+        }
+
+        .hero-figure img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-figure figcaption {
+            background: #fff;
+            padding: 10px 14px;
+            font-size: 13px;
+            color: #50616a;
+            text-align: center;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+            margin-top: 22px;
+        }
+
+        .platform-card {
+            background: #fff;
+            border-radius: 18px;
+            border: 1px solid #e1ecef;
+            padding: 22px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+
+        .platform-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 19px;
+            color: #244652;
+            margin-bottom: 10px;
+        }
+
+        .platform-card p {
+            font-size: 14px;
+            line-height: 1.72;
+            margin-bottom: 12px;
+        }
+
+        .platform-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .platform-list li {
+            font-size: 13px;
+            line-height: 1.75;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .platform-list strong,
+        .section-note strong {
+            color: #2d5f6d;
+        }
+
+        .platform-list a,
+        .compare-table a,
+        .section-note a,
+        .resource-list a {
+            color: #2d7184;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .platform-list a:hover,
+        .compare-table a:hover,
+        .section-note a:hover,
+        .resource-list a:hover {
+            text-decoration: underline;
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 18px;
+            min-width: 760px;
+        }
+
+        .compare-table th,
+        .compare-table td {
+            padding: 11px 12px;
+            border-bottom: 1px solid #e7eef0;
+            text-align: left;
+            vertical-align: top;
+            font-size: 14px;
+            color: #46525a;
+        }
+
+        .compare-table th {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #4ca1af1e;
+            color: #2d7184;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .section-note {
+            margin-top: 18px;
+            padding: 15px 18px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #eef7fa 0%, #f6fbfc 100%);
+            border-left: 4px solid #4ca1af;
+            color: #4d5a60;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .use-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .use-card {
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #e3ecef;
+            padding: 18px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+
+        .use-card h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            color: #274c58;
+            margin-bottom: 8px;
+        }
+
+        .use-card p {
+            font-size: 14px;
+            margin-bottom: 0;
+            line-height: 1.7;
+        }
+
+        .resource-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .resource-list li {
+            padding: 9px 0;
+            border-bottom: 1px solid #e7eef0;
+            font-size: 15px;
+        }
+
+        .resource-list li:last-child {
+            border-bottom: none;
+        }
+
         @media (max-width: 768px) {
             .top-bar { flex-direction: column; }
             .logo-band { flex: none; flex-direction: row; gap: 12px; padding: 14px 20px; border-radius: 16px; }
@@ -156,6 +330,7 @@
             .page-banner { height: 120px; border-radius: 16px; }
             .page-banner-title { font-size: 20px; }
             .content-box { padding: 30px 22px; }
+            .hero-figure img { height: 190px; }
         }
     </style>
 </head>
@@ -181,8 +356,156 @@
 
     <div class="content-wrapper">
         <div class="content-box">
-            <h2>Öğrenme ve Gelişim Topluluğu</h2>
-            <p>İçeriklerinizi buraya ekleyebilirsiniz...</p>
+            <h2>EBA ve ÖBA: Dijital Öğrenme ve Mesleki Gelişim Ekosistemi</h2>
+            <p>
+                Millî Eğitim Bakanlığı'nın dijital eğitim vizyonu içinde <strong>EBA</strong> ve <strong>ÖBA</strong>,
+                birbirini tamamlayan iki temel platform olarak öne çıkmaktadır. EBA, öğrenciler, öğretmenler ve veliler için
+                içerik, ders, etkinlik ve dijital öğrenme kaynakları sunarken; ÖBA daha çok öğretmenlerin mesleki gelişim,
+                hizmet içi eğitim ve uzmanlaşma süreçlerine odaklanan bir yapı sunmaktadır.
+            </p>
+            <p>
+                Bu iki platform birlikte değerlendirildiğinde, okul ekosisteminde hem öğrenci öğrenmesini hem de öğretmen
+                gelişimini destekleyen bütüncül bir dijital ortam ortaya çıkmaktadır.
+            </p>
+
+            <figure class="hero-figure">
+                <img src="images/oba-eba.jpeg" alt="Dijital öğrenme ve gelişim topluluğu">
+                <figcaption>EBA öğrenme içeriklerini, ÖBA ise öğretmen gelişim süreçlerini destekleyen tamamlayıcı yapılardır.</figcaption>
+            </figure>
+        </div>
+
+        <div class="content-box" style="margin-top: 26px; min-height: auto;">
+            <h2>Platformların Temel Yapısı</h2>
+
+            <div class="platform-grid">
+                <article class="platform-card">
+                    <h3>EBA – Eğitim Bilişim Ağı</h3>
+                    <p>
+                        EBA, YEĞİTEK tarafından geliştirilen ve yönetilen dijital eğitim platformudur. Portal; öğrenci, öğretmen
+                        ve veli erişimine açık yapısıyla ders içerikleri, videolar, etkileşimli uygulamalar, kitaplar, ölçme araçları
+                        ve farklı eğitim kaynaklarını tek çatı altında toplar.
+                    </p>
+                    <ul class="platform-list">
+                        <li><strong>Hedef kitle:</strong> Öğrenci, öğretmen, veli</li>
+                        <li><strong>İçerik türleri:</strong> Ders anlatımları, etkinlikler, testler, videolar, dijital materyaller</li>
+                        <li><strong>Kurumsal yapı:</strong> YEĞİTEK / MEB dijital eğitim ekosistemi</li>
+                        <li><strong>Bağlantı:</strong> <a href="https://www.eba.gov.tr" target="_blank">eba.gov.tr</a></li>
+                    </ul>
+                </article>
+
+                <article class="platform-card">
+                    <h3>ÖBA – Öğretmen Bilişim Ağı / Öğretmen Akademisi</h3>
+                    <p>
+                        ÖBA, öğretmenlerin çevrim içi eğitimlere katılması, hizmet içi eğitim başvurularını takip etmesi ve
+                        mesleki gelişim içeriklerine ulaşması için kullanılan dijital platformdur. Adaylık eğitimleri, mesleki
+                        gelişim içerikleri ve dijital yetkinlik eğitim paketleri gibi başlıklar öne çıkmaktadır.
+                    </p>
+                    <ul class="platform-list">
+                        <li><strong>Hedef kitle:</strong> Öğretmenler ve eğitim personeli</li>
+                        <li><strong>İçerik türleri:</strong> Hizmet içi eğitim, adaylık eğitimi, mesleki gelişim modülleri</li>
+                        <li><strong>Öne çıkan yapı:</strong> Dijital Yetkinlik Eğitim Paketi, yüz yüze eğitim başvuruları</li>
+                        <li><strong>Bağlantı:</strong> <a href="https://www.oba.gov.tr" target="_blank">oba.gov.tr</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+
+        <div class="content-box" style="margin-top: 26px; min-height: auto;">
+            <h2>EBA ve ÖBA Karşılaştırması</h2>
+            <div style="overflow-x:auto;">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Başlık</th>
+                            <th>EBA</th>
+                            <th>ÖBA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="pill">Amaç</span></td>
+                            <td>Öğretim süreçlerini dijital içeriklerle desteklemek</td>
+                            <td>Öğretmenlerin mesleki gelişim süreçlerini desteklemek</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill">Kullanıcılar</span></td>
+                            <td>Öğrenci, öğretmen, veli</td>
+                            <td>Öğretmenler ve eğitim personeli</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill">İçerik</span></td>
+                            <td>Ders, etkinlik, video, soru, kitap, etkileşimli içerik</td>
+                            <td>Seminer, kurs, hizmet içi eğitim, adaylık ve yetkinlik paketleri</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill">Erişim biçimi</span></td>
+                            <td>Genel dijital eğitim portalı</td>
+                            <td>Mesleki gelişim odaklı özel portal</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill">Kurumsal bağlam</span></td>
+                            <td>YEĞİTEK ve MEB dijital eğitim hizmetleri</td>
+                            <td>MEB öğretmen eğitimi ve dijital mesleki gelişim çalışmaları</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill">Bağlantı</span></td>
+                            <td><a href="https://www.eba.gov.tr" target="_blank">eba.gov.tr</a></td>
+                            <td><a href="https://www.oba.gov.tr" target="_blank">oba.gov.tr</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-note">
+                <strong>Özetle:</strong> EBA daha çok öğrenenin ders içeriğine erişimini kolaylaştırırken,
+                ÖBA öğretmenin sürekli gelişim ve eğitim yönetimi ihtiyaçlarına cevap verir. Bu nedenle iki platform,
+                okulun dijital kültürünü farklı açılardan güçlendiren tamamlayıcı araçlar olarak görülmelidir.
+            </div>
+        </div>
+
+        <div class="content-box" style="margin-top: 26px; min-height: auto;">
+            <h2>Okul Ortamında Kullanım Alanları</h2>
+            <div class="use-grid">
+                <div class="use-card">
+                    <h4>Sınıf içi öğrenme</h4>
+                    <p>EBA üzerinden ders anlatımları, etkinlikler, videolar ve ölçme araçları kullanılarak sınıf içi öğretim desteklenebilir.</p>
+                </div>
+                <div class="use-card">
+                    <h4>Ödev ve tekrar</h4>
+                    <p>Öğrenciler ders dışı zamanlarda EBA içeriklerine erişerek tekrar yapabilir, öğretmenler de yönlendirilmiş içerikler paylaşabilir.</p>
+                </div>
+                <div class="use-card">
+                    <h4>Öğretmen mesleki gelişimi</h4>
+                    <p>ÖBA üzerinden seminerler, hizmet içi eğitimler ve dijital yetkinlik modülleri takip edilerek mesleki gelişim planlanabilir.</p>
+                </div>
+                <div class="use-card">
+                    <h4>Kurum içi gelişim kültürü</h4>
+                    <p>EBA ve ÖBA birlikte kullanıldığında okulda hem öğrenme hem de öğretmen gelişimi için ortak bir dijital kültür oluşur.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box" style="margin-top: 26px; min-height: auto;">
+            <h2>ÖBA'da Öne Çıkan Başlıklar</h2>
+            <p>
+                Kamuya açık içeriklerden görüldüğü üzere ÖBA; <strong>adaylık eğitimleri</strong>, <strong>hizmet içi eğitimler</strong>,
+                <strong>mesleki gelişim toplulukları</strong> ve <strong>Dijital Yetkinlik Eğitim Paketi</strong> gibi başlıklar altında
+                öğretmenlere yapılandırılmış öğrenme fırsatları sunmaktadır. Ayrıca yüz yüze eğitim başvurularının da platform üzerinden
+                takip edilebilmesi, ÖBA'yı yalnızca bir içerik arşivi değil aynı zamanda bir mesleki gelişim yönetim alanı hâline getirmektedir.
+            </p>
+            <p>
+                EBA tarafında ise farklı ders seviyelerine ve kullanıcı türlerine yönelik çok geniş bir içerik havuzu bulunması, platformu
+                günlük eğitim pratiğinin vazgeçilmez dijital desteklerinden biri yapmaktadır.
+            </p>
+        </div>
+
+        <div class="content-box" style="margin-top: 26px; min-height: auto;">
+            <h2>Kaynaklar</h2>
+            <ul class="resource-list">
+                <li><a href="https://www.eba.gov.tr" target="_blank">EBA – Eğitim Bilişim Ağı</a></li>
+                <li><a href="https://www.oba.gov.tr" target="_blank">ÖBA – Öğretmen gelişim ve eğitim portalı</a></li>
+                <li><a href="https://yegitek.meb.gov.tr" target="_blank">YEĞİTEK – Yenilik ve Eğitim Teknolojileri Genel Müdürlüğü</a></li>
+            </ul>
         </div>
     </div>
 

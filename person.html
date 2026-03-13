@@ -148,6 +148,180 @@
             line-height: 1.9;
         }
 
+        .profile-hero {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #edf1f5 0%, #cfd9df 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6d7780;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px dashed #aab4bd;
+        }
+
+        .profile-intro h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 34px;
+            color: #2f3640;
+            margin-bottom: 8px;
+        }
+
+        .profile-title {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: #667eea18;
+            color: #5563c1;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .profile-intro p {
+            margin-bottom: 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .contact-card {
+            background: #fff;
+            border: 1px solid #e8edf2;
+            border-radius: 16px;
+            padding: 16px 18px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+        }
+
+        .contact-card span {
+            display: block;
+            font-size: 12px;
+            color: #7a838b;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .contact-card div {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .section-box {
+            margin-top: 26px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 28px 30px;
+            border: 1px solid #e9edf1;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        .section-box h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 22px;
+            border-left: 2px solid #d8dee5;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #667eea;
+        }
+
+        .timeline-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .timeline-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #2f3640;
+        }
+
+        .timeline-date {
+            font-size: 13px;
+            color: #7a838b;
+            font-weight: 600;
+        }
+
+        .timeline-sub {
+            font-size: 14px;
+            color: #5d6670;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .chip-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .chip {
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #f0f3f7;
+            color: #49525a;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 26px;
+        }
+
+        .note-panel {
+            background: linear-gradient(135deg, #f8f9fb 0%, #edf2f7 100%);
+            border-left: 4px solid #667eea;
+            border-radius: 14px;
+            padding: 16px 18px;
+            font-size: 14px;
+            color: #4c5660;
+            line-height: 1.75;
+            margin-top: 24px;
+        }
+
         @media (max-width: 768px) {
             .top-bar { flex-direction: column; }
             .logo-band { flex: none; flex-direction: row; gap: 12px; padding: 14px 20px; border-radius: 16px; }
@@ -155,6 +329,9 @@
             .page-banner { height: 120px; border-radius: 16px; }
             .page-banner-title { font-size: 26px; }
             .content-box { padding: 30px 22px; }
+            .profile-hero { grid-template-columns: 1fr; }
+            .profile-photo { width: 100%; max-width: 220px; margin: 0 auto; }
+            .two-col { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -177,8 +354,135 @@
 
     <div class="content-wrapper">
         <div class="content-box">
-            <h2>Kişi Rehberi</h2>
-            <p>İçeriklerinizi buraya ekleyebilirsiniz...</p>
+            <h2>Kişisel Profil / Özgeçmiş Taslağı</h2>
+
+            <div class="profile-hero">
+                <div class="profile-photo">Fotoğraf Alanı</div>
+                <div class="profile-intro">
+                    <h1>Ad Soyad</h1>
+                    <div class="profile-title">Görev / Unvan / Kısa Mesleki Tanım</div>
+                    <p>
+                        Bu alanı kendinizi kısaca tanıtmak için kullanabilirsiniz. Örneğin mevcut göreviniz, uzmanlık alanlarınız,
+                        mesleki yaklaşımınız ve öne çıkan yetkinlikleriniz burada 3-4 cümle ile özetlenebilir. Daha sonra bu metni
+                        kendi bilgilerinizle kolayca değiştirebilirsiniz.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span>Telefon</span>
+                    <div>05xx xxx xx xx</div>
+                </div>
+                <div class="contact-card">
+                    <span>E-posta</span>
+                    <div>ornek@alanadi.com</div>
+                </div>
+                <div class="contact-card">
+                    <span>Konum</span>
+                    <div>İl / İlçe</div>
+                </div>
+                <div class="contact-card">
+                    <span>Web / Sosyal Medya</span>
+                    <div>website.com / profil bağlantısı</div>
+                </div>
+            </div>
+
+            <div class="section-box">
+                <h3>Hakkımda</h3>
+                <p>
+                    Buraya daha detaylı kişisel özet ekleyebilirsiniz. Eğitim geçmişiniz, mesleki ilgi alanlarınız,
+                    çalıştığınız kurumlar, teknolojiye yaklaşımınız veya kişisel hedefleriniz bu bölümde yer alabilir.
+                    İsterseniz bu kısmı daha resmî bir özgeçmiş diliyle, isterseniz daha samimi bir kişisel profil diliyle düzenleyebilirsiniz.
+                </p>
+            </div>
+
+            <div class="section-box">
+                <h3>İş Deneyimi</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-top">
+                        <div class="timeline-title">Görev / Pozisyon Adı</div>
+                        <div class="timeline-date">20XX – Devam Ediyor</div>
+                    </div>
+                    <div class="timeline-sub">Kurum / Kuruluş Adı</div>
+                    <p>
+                        Bu bölümde yürüttüğünüz görevleri, sorumluluk alanlarınızı ve dikkat çeken çalışmalarınızı yazabilirsiniz.
+                        Örneğin proje yürütme, teknik destek, eğitim verme, koordinasyon veya yönetim görevleri burada sıralanabilir.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-top">
+                        <div class="timeline-title">Önceki Görev / Pozisyon</div>
+                        <div class="timeline-date">20XX – 20XX</div>
+                    </div>
+                    <div class="timeline-sub">Kurum / Kuruluş Adı</div>
+                    <p>
+                        Daha önce çalıştığınız görev yerlerini veya üstlendiğiniz sorumlulukları bu alana ekleyebilirsiniz.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-box">
+                <h3>Eğitim Bilgileri</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-top">
+                        <div class="timeline-title">Okul / Fakülte / Bölüm</div>
+                        <div class="timeline-date">20XX – 20XX</div>
+                    </div>
+                    <div class="timeline-sub">Lisans / Yüksek Lisans / Sertifika</div>
+                    <p>Buraya mezuniyet bilgilerinizi, eğitim alanınızı ve varsa önemli akademik çalışmalarınızı ekleyebilirsiniz.</p>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="section-box" style="margin-top: 0;">
+                    <h3>Yetkinlikler</h3>
+                    <div class="chip-grid">
+                        <span class="chip">Teknik Destek</span>
+                        <span class="chip">Eğitim Teknolojileri</span>
+                        <span class="chip">Ağ Altyapısı</span>
+                        <span class="chip">Proje Yönetimi</span>
+                        <span class="chip">İletişim</span>
+                        <span class="chip">Raporlama</span>
+                    </div>
+                </div>
+
+                <div class="section-box" style="margin-top: 0;">
+                    <h3>Sertifikalar / Belgeler</h3>
+                    <ul>
+                        <li>Sertifika veya belge adı</li>
+                        <li>Eğitim / seminer / kurs adı</li>
+                        <li>Kurumsal başarı veya katılım belgesi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="section-box" style="margin-top: 0;">
+                    <h3>Projeler ve Çalışmalar</h3>
+                    <ul>
+                        <li>Yürüttüğünüz önemli proje veya saha çalışması</li>
+                        <li>Koordinasyonunu sağladığınız uygulama veya organizasyon</li>
+                        <li>Katkı sunduğunuz kurumsal gelişim çalışması</li>
+                    </ul>
+                </div>
+
+                <div class="section-box" style="margin-top: 0;">
+                    <h3>Referanslar / Notlar</h3>
+                    <p>
+                        İsterseniz bu alanı referans bilgileri için kullanabilir ya da tamamen boş bırakabilirsiniz.
+                        Alternatif olarak bu bölüme hobiler, ilgi alanları veya kişisel notlar da eklenebilir.
+                    </p>
+                </div>
+            </div>
+
+            <div class="note-panel">
+                Bu sayfa bir <strong>kaba taslak CV şablonu</strong> olarak hazırlandı. Başlıkları azaltabilir, çoğaltabilir,
+                fotoğraf alanını gerçek görselle değiştirebilir ve tüm örnek metinleri kendi bilgilerinizle doldurabilirsiniz.
+            </div>
         </div>
     </div>
 
