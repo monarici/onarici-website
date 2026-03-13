@@ -149,6 +149,185 @@
             line-height: 1.9;
         }
 
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 22px;
+        }
+
+        .phase-card {
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #e9eef2;
+            padding: 18px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        }
+
+        .phase-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            color: #23523c;
+            margin-bottom: 10px;
+        }
+
+        .phase-card p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .meta-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .meta-list li {
+            font-size: 13px;
+            color: #4a4a4a;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        .meta-list strong {
+            color: #1a8a55;
+        }
+
+        .network-hero {
+            margin-top: 18px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5ecf0;
+        }
+
+        .network-hero img {
+            width: 100%;
+            height: 280px;
+            object-fit:scale-down;
+            display: block;
+        }
+
+        .network-hero figcaption {
+            background: #fff;
+            padding: 10px 14px;
+            font-size: 13px;
+            color: #4d4d4d;
+            text-align: center;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 18px;
+            min-width: 700px;
+        }
+
+        .info-table th,
+        .info-table td {
+            border-bottom: 1px solid #edf1f4;
+            padding: 11px 12px;
+            text-align: left;
+            font-size: 14px;
+            color: #3e3e3e;
+            vertical-align: top;
+        }
+
+        .info-table th {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.2px;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 16px;
+            background: #43e97b1a;
+            color: #1a8a55;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .callout {
+            margin-top: 20px;
+            padding: 14px 16px;
+            background: #e8fff4;
+            border-left: 4px solid #2abf77;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #335b46;
+            line-height: 1.7;
+        }
+
+        .timeline {
+            margin-top: 18px;
+            padding-left: 16px;
+            border-left: 3px solid #43e97b66;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 16px;
+            padding-left: 16px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #2abf77;
+        }
+
+        .timeline-item h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            color: #1f5f42;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .resource-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 12px;
+        }
+
+        .resource-list li {
+            padding: 9px 0;
+            border-bottom: 1px solid #ecf0f2;
+            font-size: 15px;
+        }
+
+        .resource-list li:last-child {
+            border-bottom: none;
+        }
+
+        .resource-list a,
+        .info-table a,
+        .callout a {
+            color: #1a8a55;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .resource-list a:hover,
+        .info-table a:hover,
+        .callout a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .top-bar { flex-direction: column; }
             .logo-band { flex: none; flex-direction: row; gap: 12px; padding: 14px 20px; border-radius: 16px; }
@@ -156,6 +335,7 @@
             .page-banner { height: 120px; border-radius: 16px; }
             .page-banner-title { font-size: 22px; }
             .content-box { padding: 30px 22px; }
+            .network-hero img { height: 190px; }
         }
     </style>
 </head>
@@ -181,8 +361,184 @@
 
     <div class="content-wrapper">
         <div class="content-box">
-            <h2>Ağ Altyapı Sistemleri</h2>
-            <p>İçeriklerinizi buraya ekleyebilirsiniz...</p>
+            <h2>Eğitimde Teknolojik Ortamlar İçin Ağ Altyapı Kurulumları</h2>
+            <p>
+                Milli Eğitim Bakanlığı Yenilik ve Eğitim Teknolojileri Genel Müdürlüğü (YEĞİTEK), FATİH Projesi kapsamında
+                okulların güvenli ve sürdürülebilir biçimde internete erişebilmesi için ağ altyapı kurulumlarını fazlar hâlinde
+                yürütmektedir. Bu altyapı; yerel alan ağını (LAN), yönetilebilir ağ cihazlarını, internet/VPN erişimini ve
+                kurulum sonrası bakım-onarım süreçlerini birlikte ele alan bütüncül bir yapıya sahiptir.
+            </p>
+            <p>
+                Aşağıdaki özet, sahada kullanılan faz yapısını, yüklenici dağılımını, garanti/sözleşme tarihlerini ve arıza bildirim
+                akışını tek bir çerçevede sunar.
+            </p>
+
+            <figure class="network-hero">
+                <img src="images/network.png" alt="Okul ağ altyapısı ve dijital öğrenme ortamı">
+                <figcaption>Okul ağ omurgası; yerel ağ, yönetilebilir anahtarlama ve FATİH VPN erişimi bileşenlerinden oluşur.</figcaption>
+            </figure>
+        </div>
+
+        <div class="content-box" style="margin-top: 26px; min-height: auto;">
+            <h2>Faz Bazlı Kurulum Özeti</h2>
+            <div class="phase-grid">
+                <article class="phase-card">
+                    <h3>FAZ 1</h3>
+                    <p>İlk kurulum fazıdır. Okullarda fiber internet erişimi ve FATİH VPN hizmeti sağlanmıştır.</p>
+                    <ul class="meta-list">
+                        <li><strong>Bağlantı:</strong> Fiber internet + FATİH VPN</li>
+                        <li><strong>LAN garantisi:</strong> İnnova (12.07.2026'ya kadar, FAZ 1-2 ortak kapsam)</li>
+                        <li><strong>Arıza kaydı:</strong> <a href="http://fatihpys.eba.gov.tr" target="_blank">fatihpys.eba.gov.tr</a></li>
+                    </ul>
+                </article>
+
+                <article class="phase-card">
+                    <h3>FAZ 2</h3>
+                    <p>Sentim firması tarafından kurulan fazdır. Fiber internet ve FATİH VPN erişimi sağlanır.</p>
+                    <ul class="meta-list">
+                        <li><strong>Yüklenici:</strong> Sentim</li>
+                        <li><strong>Bağlantı:</strong> Fiber internet + FATİH VPN</li>
+                        <li><strong>LAN garantisi:</strong> İnnova (12.07.2026'ya kadar, FAZ 1-2 ortak kapsam)</li>
+                        <li><strong>Arıza kaydı:</strong> <a href="http://fatihpys.eba.gov.tr" target="_blank">fatihpys.eba.gov.tr</a></li>
+                    </ul>
+                </article>
+
+                <article class="phase-card">
+                    <h3>1250 Okul Kurulumu</h3>
+                    <p>"1250 okul" başlığı altında yapılan kurulumlar Promet firması tarafından gerçekleştirilmiştir.</p>
+                    <ul class="meta-list">
+                        <li><strong>Yüklenici:</strong> Promet</li>
+                        <li><strong>VPN:</strong> Var</li>
+                        <li><strong>Sözleşme/Garanti bitiş:</strong> 23.06.2026</li>
+                        <li><strong>Arıza kaydı:</strong> Okul tarafından <a href="http://fatihpys.eba.gov.tr" target="_blank">fatihpys.eba.gov.tr</a></li>
+                    </ul>
+                </article>
+
+                <article class="phase-card">
+                    <h3>FAZ 3</h3>
+                    <p>VERIFY ve PRODAY firmaları tarafından kurulan fazdır; VPN hizmeti bulunmaktadır.</p>
+                    <ul class="meta-list">
+                        <li><strong>Yükleniciler:</strong> VERIFY &amp; PRODAY</li>
+                        <li><strong>VPN:</strong> Var</li>
+                        <li><strong>Sözleşme/Garanti bitiş:</strong> 01.03.2025</li>
+                        <li><strong>Arıza kaydı:</strong> Okul tarafından <a href="http://fatihpys.eba.gov.tr" target="_blank">fatihpys.eba.gov.tr</a></li>
+                    </ul>
+                </article>
+
+                <article class="phase-card">
+                    <h3>FAZ 4</h3>
+                    <p>FAZ 4 altyapı kurulumları İnnova tarafından yürütülmektedir.</p>
+                    <ul class="meta-list">
+                        <li><strong>Yüklenici:</strong> İnnova</li>
+                        <li><strong>Kapsam:</strong> Yeni altyapı kurulumları</li>
+                        <li><strong>Arıza kaydı:</strong> <a href="http://fatihpys.eba.gov.tr" target="_blank">fatihpys.eba.gov.tr</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+
+        <div class="content-box" style="margin-top: 26px; min-height: auto;">
+            <h2>FATİH Projesine Uyumlaştırma Süreci</h2>
+            <p>
+                Uyumlaştırma çalışmaları, okulun inşaatı sırasında yapılmış mevcut altyapının bakım-onarımının gerçekleştirilmesi,
+                yönetilebilir switch altyapısına geçirilmesi ve ardından FATİH VPN erişiminin devreye alınmasını kapsar.
+                Bu süreç sahada İnnova tarafından yürütülmektedir.
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>1) Mevcut altyapı analizi ve bakım-onarım</h4>
+                    <p>Kablolama, patch panel, aktif cihaz noktaları ve fiziksel dağıtım hatları kontrol edilerek iyileştirme yapılır.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2) Yönetilebilir switch altyapısına geçiş</h4>
+                    <p>Ağ izlenebilirliği, güvenlik politikaları ve merkezi yönetim için yönetilebilir anahtarlama katmanı kurulur.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>3) FATİH VPN devreye alma</h4>
+                    <p>Okul ağı, proje standartlarına uygun biçimde güvenli erişim tüneli üzerinden hizmet verir.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>4) Arıza bildirimi ve operasyon</h4>
+                    <p>Okul idaresi teknik arızaları portal üzerinden açar; saha ve merkez birimleri kayıtları süreçlendirilir.</p>
+                </div>
+            </div>
+
+            <div class="callout">
+                FATİH PYS giriş ekranında ağ altyapı, etkileşimli tahta ve VPN erişim birimlerine ait iletişim başlıkları
+                yer almakta; arıza kayıtları kurum kullanıcıları tarafından portal üzerinden yönetilmektedir:
+                <a href="http://fatihpys.eba.gov.tr" target="_blank">fatihpys.eba.gov.tr</a>
+            </div>
+        </div>
+
+        <div class="content-box" style="margin-top: 26px; min-height: auto;">
+            <h2>Sözleşme ve Garanti Takip Tablosu</h2>
+            <div style="overflow-x:auto;">
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Kurulum Paketi</th>
+                            <th>Yüklenici</th>
+                            <th>Erişim Durumu</th>
+                            <th>Bitiş Tarihi</th>
+                            <th>Arıza Bildirimi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="pill">FAZ 1</span></td>
+                            <td>İlk kurulum fazı (saha bilgisi)</td>
+                            <td>Fiber internet + FATİH VPN</td>
+                            <td>LAN garanti kapsamı: 12.07.2026 (İnnova, FAZ 1-2)</td>
+                            <td><a href="http://fatihpys.eba.gov.tr" target="_blank">fatihpys.eba.gov.tr</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill">FAZ 2</span></td>
+                            <td>Sentim</td>
+                            <td>Fiber internet + FATİH VPN</td>
+                            <td>LAN garanti kapsamı: 12.07.2026 (İnnova, FAZ 1-2)</td>
+                            <td><a href="http://fatihpys.eba.gov.tr" target="_blank">fatihpys.eba.gov.tr</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill">1250 Okul</span></td>
+                            <td>Promet</td>
+                            <td>VPN var</td>
+                            <td>23.06.2026 (sözleşme bitişi = garanti bitişi)</td>
+                            <td>Okul tarafından portal kaydı</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill">FAZ 3</span></td>
+                            <td>VERIFY &amp; PRODAY</td>
+                            <td>VPN var</td>
+                            <td>01.03.2025 (sözleşme bitişi = garanti bitişi)</td>
+                            <td>Okul tarafından portal kaydı</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill">FAZ 4</span></td>
+                            <td>İnnova</td>
+                            <td>FATİH’e uyumlu ağ altyapı kurulumu</td>
+                            <td>Devam eden kurulumlar</td>
+                            <td><a href="http://fatihpys.eba.gov.tr" target="_blank">fatihpys.eba.gov.tr</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="callout" style="margin-top: 16px;">
+                Not: FAZ 3 için belirtilen tarih geçmiş olduğundan, güncel hizmet/yenileme durumları il/ilçe operasyon kayıtları
+                ve resmi sözleşme güncellemeleri üzerinden ayrıca teyit edilmelidir.
+            </div>
+        </div>
+
+        <div class="content-box" style="margin-top: 26px; min-height: auto;">
+            <h2>Kaynaklar</h2>
+            <ul class="resource-list">
+                <li><a href="http://fatihpys.eba.gov.tr" target="_blank">FATİH PYS – Arıza bildirimi ve birim iletişim ekranı</a></li>
+                <li><a href="https://yegitek.meb.gov.tr" target="_blank">YEĞİTEK – Yenilik ve Eğitim Teknolojileri Genel Müdürlüğü</a></li>
+                <li><a href="https://www.eba.gov.tr" target="_blank">EBA – Eğitim Bilişim Ağı</a></li>
+                <li><a href="https://fclturkiye.eba.gov.tr" target="_blank">FCL Türkiye – Yenilikçi öğrenme ortamları bağlamı</a></li>
+            </ul>
+        </div>
         </div>
     </div>
 
