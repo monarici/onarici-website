@@ -178,6 +178,27 @@
             text-decoration: underline;
         }
 
+        .back-to-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 10px 14px;
+            border-radius: 999px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .back-to-top:hover {
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
         /* ── Responsive ───────────────────────────────── */
         @media (max-width: 768px) {
             .top-bar {
@@ -196,6 +217,10 @@
                 margin-top: 0;
             }
 
+            .logo-band-sub {
+                display: none;
+            }
+
             .ai-banner {
                 height: 120px;
                 border-radius: 16px;
@@ -207,6 +232,13 @@
 
             .content-box {
                 padding: 30px 22px;
+            }
+
+            .back-to-top {
+                right: 14px;
+                bottom: 14px;
+                font-size: 11px;
+                padding: 9px 12px;
             }
         }
     </style>
@@ -280,6 +312,8 @@
             <p>Eğitimde yapay zeka araçları; öğretmenin yerini almak için değil, öğretmenin etkisini güçlendirmek için vardır. Planlama, içerik üretimi, ölçme-değerlendirme ve bireyselleştirilmiş öğrenme alanlarında sağladığı hız ve esneklik sayesinde eğitim kalitesini artırır. En verimli sonuç için temel yaklaşım; “insan rehberliği + yapay zeka desteği” dengesini korumaktır.</p>
         </div>
     </div>
+
+    <a class="back-to-top" href="#" aria-label="Sayfanın başına dön">↑ Başa Dön</a>
 
 </body>
 </html>

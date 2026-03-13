@@ -328,14 +328,37 @@
             text-decoration: underline;
         }
 
+        .back-to-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 10px 14px;
+            border-radius: 999px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .back-to-top:hover {
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
         @media (max-width: 768px) {
             .top-bar { flex-direction: column; }
             .logo-band { flex: none; flex-direction: row; gap: 12px; padding: 14px 20px; border-radius: 16px; }
             .logo-band-back { margin-top: 0; }
+            .logo-band-sub { display: none; }
             .page-banner { height: 120px; border-radius: 16px; }
             .page-banner-title { font-size: 22px; }
             .content-box { padding: 30px 22px; }
             .network-hero img { height: 190px; }
+            .back-to-top { right: 14px; bottom: 14px; font-size: 11px; padding: 9px 12px; }
         }
     </style>
 </head>
@@ -541,6 +564,8 @@
         </div>
         </div>
     </div>
+
+    <a class="back-to-top" href="#" aria-label="Sayfanın başına dön">↑ Başa Dön</a>
 
 </body>
 </html>
